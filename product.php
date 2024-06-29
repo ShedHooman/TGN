@@ -136,7 +136,7 @@ if(isset($_POST['add_to_cart'])){
                             <span>Ingredient: </span>
                             <p class="lead"><?= $fetch_product['ingredient']; ?></p>
                         </div>
-                            <span>Details: </span>
+                            <span>Detail: </span>
                             <p class="lead"><?= $fetch_product['details']; ?></p>
                         <div class="d-flex">
                             <input class="form-control text-center me-3" name="qty" type="num" value="1" style="max-width: 3rem" />
@@ -156,36 +156,66 @@ if(isset($_POST['add_to_cart'])){
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="fw-bolder mb-4">Related products</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                            </div>
-                        </div>
-                    </div>
+                
+                <?php
+                // 1. Produk Terlaris
+$stmt = $conn->prepare("SELECT * FROM products ORDER BY sold DESC LIMIT 4");
+$stmt->execute();
+$best_selling_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// 2. Produk Terakhir Dilihat (Anda perlu menyimpan data ini di sesi atau database)
+$recently_viewed_products = isset($_SESSION['recently_viewed']) ? $_SESSION['recently_viewed'] : array();
+
+// Batasi hanya 3 produk terakhir yang dilihat
+$recently_viewed_products = array_slice($recently_viewed_products, -4);
+
+// 3. Produk di Keranjang
+$stmt = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
+$stmt->execute([$user_id]);
+$cart_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// 4. Rekomendasi Berdasarkan Preferensi Aroma (Anda perlu menyimpan preferensi di database)
+// Contoh sederhana: Ambil 3 produk random dengan aroma yang paling sering dibeli
+$stmt = $conn->prepare("SELECT p.* FROM products p
+                         INNER JOIN cart c ON p.name = c.name
+                         WHERE c.user_id = ?
+                         GROUP BY p.name
+                         ORDER BY COUNT(*) DESC 
+                         LIMIT 3");
+$stmt->execute([$user_id]);
+$recommended_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Gabungkan semua produk
+$all_products = array_merge(
+    $best_selling_products,
+    array_diff($recently_viewed_products, $best_selling_products), // Hilangkan duplikat
+    array_diff($cart_products, $best_selling_products, $recently_viewed_products), // Hilangkan duplikat
+    $recommended_products
+);
+
+// Jika kurang dari 3 produk, tambahkan produk random
+if (count($all_products) < 4) {
+    $stmt = $conn->prepare("SELECT * FROM products ORDER BY RAND() LIMIT ?");
+    $stmt->execute([4 - count($all_products)]);
+    $random_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $all_products = array_merge($all_products, $random_products);
+}
+
+// Tampilkan produk rekomendasi
+foreach ($all_products as $fetch_product) {
+                ?> 
+
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <img class="card-img-top" src="assets/img/menu/<?= $fetch_product['image'];?>" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <h5 class="fw-bolder"><?= $fetch_product['name']; ?></h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -195,69 +225,23 @@ if(isset($_POST['add_to_cart'])){
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                    Rp <?= $fetch_product['price']; ?>,00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="product.php?pid=<?= $fetch_product['id'];?>">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $40.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
+                <?php
+                }
+                ?>
                 </div>
             </div>
         </section>
       <?php
+                
       }
       }else{
           echo '<p class=>belum ada produk yang ditambahkan!</p>';
