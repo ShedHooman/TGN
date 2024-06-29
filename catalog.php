@@ -81,21 +81,98 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['user_level'])) {
     <!-- End Breadcrumbs -->
 
     <!-- Header-->
-    <header class="bg-dark py-5">
+    <header class="bg-anjay py-3">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                    <h1 class="display-4 fw-bolder">Recomendation</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Check our best product for you!</p>
+                </div>
+            
+        <!-- recomendation Section-->
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                
+                <?php 
+                    // Read produucts
+                    // 1. Produk Terlaris
+                    $stmt = $conn->prepare("SELECT * FROM products ORDER BY sold DESC LIMIT 3");
+                    $stmt->execute();
+                    $best_selling_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    // 2. Produk Terakhir Dilihat (Anda perlu menyimpan data ini di sesi atau database)
+                    $recently_viewed_products = isset($_SESSION['recently_viewed']) ? $_SESSION['recently_viewed'] : array();
+
+                    // Batasi hanya 3 produk terakhir yang dilihat
+                    $recently_viewed_products = array_slice($recently_viewed_products, -3);
+
+                    // 3. Produk di Keranjang
+                    $stmt = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
+                    $stmt->execute([$user_id]);
+                    $cart_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    // 4. Rekomendasi Berdasarkan Preferensi Aroma (Anda perlu menyimpan preferensi di database)
+                    // Contoh sederhana: Ambil 3 produk random dengan aroma yang paling sering dibeli
+                    $stmt = $conn->prepare("SELECT p.* FROM products p
+                                            INNER JOIN cart c ON p.name = c.name
+                                            WHERE c.user_id = ?
+                                            GROUP BY p.name
+                                            ORDER BY COUNT(*) DESC 
+                                            LIMIT 3");
+                    $stmt->execute([$user_id]);
+                    $recommended_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    // Gabungkan semua produk
+                    $all_products = array_merge(
+                        $best_selling_products,
+                        array_diff($recently_viewed_products, $best_selling_products), // Hilangkan duplikat
+                        array_diff($cart_products, $best_selling_products, $recently_viewed_products), // Hilangkan duplikat
+                        $recommended_products
+                    );
+
+                    // Jika kurang dari 3 produk, tambahkan produk random
+                    if (count($all_products) < 3) {
+                        $stmt = $conn->prepare("SELECT * FROM products ORDER BY RAND() LIMIT ?");
+                        $stmt->execute([3 - count($all_products)]);
+                        $random_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        $all_products = array_merge($all_products, $random_products);
+                    }
+
+                    // Tampilkan produk rekomendasi
+                    foreach ($all_products as $fetch_product) {
+                ?>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="assets/img/menu/<?= $fetch_product['image'];?>" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder"><?= $fetch_product['name'];?></h5>
+                                    <!-- Product price-->
+                                    Rp <?= $fetch_product['price'];?>,00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="product.php?pid=<?= $fetch_product['id'];?>">View options</a></div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?>
                 </div>
             </div>
-        </header>
-        <!-- Section-->
+        </div>
+    </header>
+        <!-- all product section -->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 
                 <?php 
-                    // Read produucts kategori male
+                    // Read produucts
                     $select_query = "SELECT * FROM `products`";
                     $result = $conn->query($select_query);
                     if ($result->rowCount() > 0) {
