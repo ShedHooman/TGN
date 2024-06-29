@@ -1555,3 +1555,7 @@ section {
   transition: 0.4s;
   border-radius: 50px;
 }
+
+.bg-anjay {
+  background-color: #b4b4af;
+}
