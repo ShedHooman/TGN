@@ -1,0 +1,121 @@
+[10-Dec-2023 20:56:36 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:56:36 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 20:56:49 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:56:49 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 20:56:50 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:56:50 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 20:57:47 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:57:47 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 20:57:53 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:57:53 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 20:57:53 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:57:53 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 20:57:54 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:57:54 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 20:57:54 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 20:57:54 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:12:28 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:12:29 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:12:36 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:12:36 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:13:30 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:13:30 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:13:32 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:13:32 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:20:31 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:20:31 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:20:37 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:20:37 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:22:38 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:22:38 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:23:43 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:23:43 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:26:08 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:26:08 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:26:47 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:26:47 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:27:36 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:27:36 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:27:37 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:27:37 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:27:40 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:27:40 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:30:21 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:30:21 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:30:26 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:30:26 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:44:15 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:44:15 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:44:24 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:44:24 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:44:32 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:44:32 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:45:21 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:45:21 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:51:09 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:51:09 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:51:16 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:51:16 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:53:32 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:53:32 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:53:39 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:53:39 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:53:40 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:53:40 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 21:53:44 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 21:53:44 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 22:09:09 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 22:09:09 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 22:09:28 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 22:09:28 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 22:18:32 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 22:18:32 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 22:38:33 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 22:38:33 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 22:38:35 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 22:38:35 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[10-Dec-2023 22:38:48 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/Admin/header.php on line 5
+[10-Dec-2023 22:38:48 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/Admin/index.php:1) in /home/f4imy786/public_html/Admin/header.php on line 10
+[11-Dec-2023 00:12:25 Asia/Jakarta] PHP Warning:  Undefined array key "pass" in /home/f4imy786/public_html/Admin/users-edit-karyawan.php on line 50
+[11-Dec-2023 00:12:25 Asia/Jakarta] PHP Warning:  Undefined array key "level" in /home/f4imy786/public_html/Admin/users-edit-karyawan.php on line 52
+[11-Dec-2023 00:12:25 Asia/Jakarta] PHP Warning:  Undefined array key "status" in /home/f4imy786/public_html/Admin/users-edit-karyawan.php on line 53
+[11-Dec-2023 07:10:55 Asia/Jakarta] PHP Warning:  include(connect.php): Failed to open stream: No such file or directory in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 07:10:55 Asia/Jakarta] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 17:39:31 Asia/Jakarta] PHP Warning:  include(connect.php): Failed to open stream: No such file or directory in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 17:39:31 Asia/Jakarta] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 17:47:23 Asia/Jakarta] PHP Warning:  include(connect.php): Failed to open stream: No such file or directory in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 17:47:23 Asia/Jakarta] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 17:53:53 Asia/Jakarta] PHP Warning:  include(connect.php): Failed to open stream: No such file or directory in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 17:53:53 Asia/Jakarta] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[11-Dec-2023 23:42:09 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list' in /home/f4imy786/public_html/Admin/users-process_karyawan.php:37
+Stack trace:
+#0 /home/f4imy786/public_html/Admin/users-process_karyawan.php(37): PDOStatement->execute()
+#1 {main}
+  thrown in /home/f4imy786/public_html/Admin/users-process_karyawan.php on line 37
+[11-Dec-2023 23:44:52 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list' in /home/f4imy786/public_html/Admin/users-process_karyawan.php:37
+Stack trace:
+#0 /home/f4imy786/public_html/Admin/users-process_karyawan.php(37): PDOStatement->execute()
+#1 {main}
+  thrown in /home/f4imy786/public_html/Admin/users-process_karyawan.php on line 37
+[11-Dec-2023 23:47:05 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list' in /home/f4imy786/public_html/Admin/users-process_karyawan.php:37
+Stack trace:
+#0 /home/f4imy786/public_html/Admin/users-process_karyawan.php(37): PDOStatement->execute()
+#1 {main}
+  thrown in /home/f4imy786/public_html/Admin/users-process_karyawan.php on line 37
+[12-Dec-2023 00:27:48 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list' in /home/f4imy786/public_html/Admin/users-process_karyawan.php:37
+Stack trace:
+#0 /home/f4imy786/public_html/Admin/users-process_karyawan.php(37): PDOStatement->execute()
+#1 {main}
+  thrown in /home/f4imy786/public_html/Admin/users-process_karyawan.php on line 37
+[12-Dec-2023 05:09:48 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list' in /home/f4imy786/public_html/Admin/users-process_karyawan.php:37
+Stack trace:
+#0 /home/f4imy786/public_html/Admin/users-process_karyawan.php(37): PDOStatement->execute()
+#1 {main}
+  thrown in /home/f4imy786/public_html/Admin/users-process_karyawan.php on line 37
+[12-Dec-2023 05:42:10 Asia/Jakarta] PHP Warning:  Undefined array key "profile_image" in /home/f4imy786/public_html/Admin/users-process_karyawan.php on line 18
+[12-Dec-2023 14:13:19 Asia/Jakarta] PHP Warning:  include(connect.php): Failed to open stream: No such file or directory in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[12-Dec-2023 14:13:19 Asia/Jakarta] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[12-Dec-2023 14:14:35 Asia/Jakarta] PHP Warning:  Undefined array key "pass" in /home/f4imy786/public_html/Admin/users-edit-konsumen.php on line 50
+[12-Dec-2023 14:14:35 Asia/Jakarta] PHP Warning:  Undefined array key "status" in /home/f4imy786/public_html/Admin/users-edit-konsumen.php on line 51
+[12-Dec-2023 14:22:15 Asia/Jakarta] PHP Warning:  include(connect.php): Failed to open stream: No such file or directory in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3
+[12-Dec-2023 14:22:15 Asia/Jakarta] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/f4imy786/public_html/Admin/admin-sign-out.php on line 3

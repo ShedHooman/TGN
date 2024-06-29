@@ -1,0 +1,363 @@
+[10-Dec-2023 20:38:34 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/f4imy786/public_html/web-enterprise/components/connect.php:7
+Stack trace:
+#0 /home/f4imy786/public_html/web-enterprise/components/connect.php(7): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/f4imy786/public_html/web-enterprise/index.php(3): include('/home/f4imy786/...')
+#2 {main}
+  thrown in /home/f4imy786/public_html/web-enterprise/components/connect.php on line 7
+[10-Dec-2023 20:38:36 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/f4imy786/public_html/web-enterprise/components/connect.php:7
+Stack trace:
+#0 /home/f4imy786/public_html/web-enterprise/components/connect.php(7): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/f4imy786/public_html/web-enterprise/index.php(3): include('/home/f4imy786/...')
+#2 {main}
+  thrown in /home/f4imy786/public_html/web-enterprise/components/connect.php on line 7
+[10-Dec-2023 20:38:49 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/f4imy786/public_html/web-enterprise/components/connect.php:7
+Stack trace:
+#0 /home/f4imy786/public_html/web-enterprise/components/connect.php(7): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/f4imy786/public_html/web-enterprise/index.php(3): include('/home/f4imy786/...')
+#2 {main}
+  thrown in /home/f4imy786/public_html/web-enterprise/components/connect.php on line 7
+[10-Dec-2023 20:45:00 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/f4imy786/public_html/web-enterprise/components/connect.php:7
+Stack trace:
+#0 /home/f4imy786/public_html/web-enterprise/components/connect.php(7): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/f4imy786/public_html/web-enterprise/index.php(3): include('/home/f4imy786/...')
+#2 {main}
+  thrown in /home/f4imy786/public_html/web-enterprise/components/connect.php on line 7
+[10-Dec-2023 20:52:28 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:28 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:31 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:31 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:35 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:35 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:53 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:53 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:53 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:55 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:55 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:56 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:56 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:57 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:57 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:58 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:58 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:58 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:58 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:59 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:59 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:52:59 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:52:59 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:55:06 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:55:06 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:55:06 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:55:06 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:55:07 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:55:07 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 20:55:08 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 20:55:08 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:38:55 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:38:55 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:38:57 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:38:57 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:38:57 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:38:57 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:38:58 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:38:58 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:38:59 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:38:59 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:38:59 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:38:59 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:39:00 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:39:00 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:41:11 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:41:11 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:41:11 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:41:16 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:41:16 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:41:16 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:46:14 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:46:14 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:50:03 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:03 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:03 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:06 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:06 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:50:12 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:12 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:12 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:17 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:17 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:50:42 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:42 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:42 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:45 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:45 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:50:48 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:50:48 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:54:41 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:54:41 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:54:41 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:54:45 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:54:45 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:54:47 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:54:47 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:55:33 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:55:33 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:55:33 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:55:38 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:55:38 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:55:41 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:55:41 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 21:55:42 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 21:55:42 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:00:30 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:00:30 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:00:30 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:00:32 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:00:33 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:00:34 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:00:34 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:00:35 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:14 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:15 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:15 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:16 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:16 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:07:16 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:16 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:07:17 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:17 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:07:17 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:17 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:07:17 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:17 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:07:18 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:07:18 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:49 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:50 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:50 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:53 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:53 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:54 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:54 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:55 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:55 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:56 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:56 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:56 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:56 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:56 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:56 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:57 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:57 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:57 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:57 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:14:57 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:14:57 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:15:03 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:15:03 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:15:05 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:15:05 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:24:25 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:24:25 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:24:27 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:24:27 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:24:28 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:24:28 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:24:29 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:24:29 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:25:43 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:25:43 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:27:07 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:27:07 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:27:07 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:27:07 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:27:09 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:27:09 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:27:34 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:27:34 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:27:34 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:28:48 Asia/Jakarta] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/f4imy786/public_html/product.php on line 6
+[10-Dec-2023 22:28:48 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/f4imy786/public_html/product.php:1) in /home/f4imy786/public_html/product.php on line 20
+[10-Dec-2023 22:45:47 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:47 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:47 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:47 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:47 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:47 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:48 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:48 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:49 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:49 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:49 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:49 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:52 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:52 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:53 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[10-Dec-2023 22:45:53 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 00:16:42 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 00:16:42 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 00:16:42 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 00:16:42 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 00:16:45 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 00:16:45 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:03:14 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:03:14 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:08:54 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:08:54 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:08:54 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:08:54 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:08:54 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:08:54 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:07 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:07 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:07 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:07 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:08 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:08 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:14 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:14 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:19 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 01:10:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 07:07:21 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 07:07:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:38:45 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:38:45 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:11 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:11 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:11 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:11 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:14 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:14 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:16 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:16 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:16 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:16 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:16 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:16 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 11:40:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:36:52 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:36:52 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:36:53 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:36:53 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:00 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:00 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:00 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:00 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:10 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:10 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:11 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:11 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:11 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:11 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:23 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:23 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:24 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:24 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:24 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:24 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:39 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:39 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:39 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 17:37:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:08 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:08 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:08 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:08 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:08 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:08 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:10 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:11:10 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:14:19 Asia/Jakarta] PHP Warning:  Undefined variable $total_products in /home/f4imy786/public_html/checkout.php on line 308
+[11-Dec-2023 21:14:22 Asia/Jakarta] PHP Warning:  Undefined variable $total_products in /home/f4imy786/public_html/checkout.php on line 308
+[11-Dec-2023 21:22:57 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:22:57 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:22:57 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:22:57 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:22:57 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:22:57 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:23:00 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[11-Dec-2023 21:23:00 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:50 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:50 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:51 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:51 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:51 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:51 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:53 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:53 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:53 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:53 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:53 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 08:49:53 Asia/Jakarta] PHP Warning:  Trying to access array offset on value of type null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:32 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:32 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:32 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:32 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:32 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:32 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:34 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 11:57:34 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:36 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:36 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:37 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:37 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:38 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:38 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:39 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 12:08:39 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:15:31 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/reset-password.php on line 111
+[12-Dec-2023 14:15:31 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/reset-password.php on line 111
+[12-Dec-2023 14:15:31 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/reset-password.php on line 112
+[12-Dec-2023 14:15:31 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/reset-password.php on line 112
+[12-Dec-2023 14:15:31 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/reset-password.php on line 113
+[12-Dec-2023 14:15:31 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/reset-password.php on line 113
+[12-Dec-2023 14:15:41 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/reset-password.php on line 111
+[12-Dec-2023 14:15:41 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/reset-password.php on line 111
+[12-Dec-2023 14:15:41 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/reset-password.php on line 112
+[12-Dec-2023 14:15:41 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/reset-password.php on line 112
+[12-Dec-2023 14:15:41 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/reset-password.php on line 113
+[12-Dec-2023 14:15:41 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/reset-password.php on line 113
+[12-Dec-2023 14:17:44 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:17:44 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:17:44 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:17:44 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:17:57 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:17:57 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:18:08 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[12-Dec-2023 14:18:08 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[13-Dec-2023 03:49:42 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[13-Dec-2023 03:49:42 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[13-Dec-2023 03:49:42 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[13-Dec-2023 03:49:42 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[13-Dec-2023 03:49:42 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/product.php on line 80
+[13-Dec-2023 03:49:42 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/product.php on line 80
+[03-Feb-2024 20:29:19 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[03-Feb-2024 20:29:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[03-Feb-2024 20:29:19 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[03-Feb-2024 20:29:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[03-Feb-2024 20:29:19 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[03-Feb-2024 20:29:19 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[03-Feb-2024 20:29:21 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[03-Feb-2024 20:29:21 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:28 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:28 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:28 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:28 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:28 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:28 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:31 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:31 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:45 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:45 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:45 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:45 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:46 Asia/Jakarta] PHP Warning:  Undefined variable $fetch_profile in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
+[11-Feb-2024 20:55:46 Asia/Jakarta] PHP Warning:  Trying to access array offset on null in /home/f4imy786/public_html/TGN Parfume/product.php on line 80
