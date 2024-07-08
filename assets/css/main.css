@@ -1559,3 +1559,21 @@ section {
 .bg-anjay {
   background-color: #b4b4af;
 }
+
+.stars input[type="radio"] {
+  display: none;
+}
+
+.stars label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.stars label:before {
+  content: '\2605'; /* Unicode star character */
+}
+
+.stars input[type="radio"]:checked ~ label:before {
+  color: gold;
+}

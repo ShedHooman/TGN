@@ -17,7 +17,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_level'])) {
 
 if(isset($_POST['add_to_cart'])){
     if($user_id == ''){
-       header('location:sign-in.php');
+        header('location:sign-in.php');
     }else{
  
        $pid = $_POST['pid'];
@@ -39,7 +39,7 @@ if(isset($_POST['add_to_cart'])){
        }else{
           $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES(?,?,?,?,?,?)");
           $insert_cart->execute([$user_id, $pid, $name, $price, $qty, $image]);
-          $message[] = 'added to cart!';
+          header('location:cart.php');
           
        }
     }
@@ -79,6 +79,9 @@ if(isset($_POST['add_to_cart'])){
 
         <!-- Template Main CSS File -->
         <link href="assets/css/main.css" rel="stylesheet">
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 
 </head>
 <body>
@@ -128,19 +131,29 @@ if(isset($_POST['add_to_cart'])){
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="./assets/img/menu/<?= $fetch_product['image'];?>" alt="...." /></div>
                     <div class="col-md-6">
                         <div class="small mb-1">SKU: BST-<?= $fetch_product['id'];?></div>
-                        <h1 class="display-5 fw-bolder"><?= $fetch_product['name']; ?></h1>
-                        <div class="fs-5 mb-4">
+                        <h1 class="display-5 fw-bolder"><?= $fetch_product['name'];?></h1>
+                        <div class="fs-5 mb-2">
                             <span>Rp. <?= $fetch_product['price']; ?>,00</span>
                         </div>
+
+                        <a href="product-review.php?pid=<?= $fetch_product['id'];?>" class="no-style-link" title="Check Reviews">
+                            <div class="d-flex justify-large text-warning mb-3">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-half"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                        </a>
                         <div class="mb-4">
                             <span>Ingredient: </span>
-                            <p class="lead"><?= $fetch_product['ingredient']; ?></p>
+                            <p class="lead"><?= $fetch_product['ingredient']; ?></p>                                                                                                                                                                                                
                         </div>
-                            <span>Detail: </span>
+                            <span>Description: </span>
                             <p class="lead"><?= $fetch_product['details']; ?></p>
                         <div class="d-flex">
                             <input class="form-control text-center me-3" name="qty" type="num" value="1" style="max-width: 3rem" />
-                        <button class="btn btn-outline-dark flex-shrink-0" type="submit" name="add_to_cart">
+                        <button class="btn btn-outline-dark flex-shrink-0" type="submit" name="add_to_cart" title="Add to cart">
                             <i class="bi-cart-fill me-1"></i>
                             Add to cart
                         </button>
@@ -230,7 +243,7 @@ foreach ($all_products as $fetch_product) {
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="product.php?pid=<?= $fetch_product['id'];?>">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" title="Go to product detail" href="product.php?pid=<?= $fetch_product['id'];?>">Add to cart</a></div>
                             </div>
                         </div>
                     </div>

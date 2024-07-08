@@ -124,10 +124,16 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['user_level'])) {
                     // Gabungkan semua produk
                     $all_products = array_merge(
                         $best_selling_products,
-                        array_diff($recently_viewed_products, $best_selling_products), // Hilangkan duplikat
-                        array_diff($cart_products, $best_selling_products, $recently_viewed_products), // Hilangkan duplikat
+                        array_udiff($recently_viewed_products, $best_selling_products, function ($a, $b) {
+                            return $a['id'] <=> $b['id'];
+                        }), // Hilangkan duplikat
+                        array_udiff($cart_products, $best_selling_products, $recently_viewed_products, function ($a, $b) {
+                            return $a['id'] <=> $b['id'];
+                        }), // Hilangkan duplikat
                         $recommended_products
                     );
+
+                    $all_products = array_slice($all_products, 0, 3);
 
                     // Jika kurang dari 3 produk, tambahkan produk random
                     if (count($all_products) < 3) {

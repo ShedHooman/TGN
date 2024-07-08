@@ -125,7 +125,7 @@ if ($select_profile->rowCount() > 0) {
                 <div class="card-header">Profile</div>
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
-                    <img src="Admin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                    <img src="assets/img/apple-touch-icon.png" alt="Profile" class="rounded-circle">
               <h3><?= $fullname; ?></h3>
               <h5><?= $level; ?></h5>
               <!-- <div class="social-links mt-2">
