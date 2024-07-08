@@ -21,7 +21,7 @@ if(isset($_POST['add_to_cart'])){
     }else{
  
        $pid = $_POST['pid'];
-       $pid = filter_var($pid, FILTER_SANITIZE_STRING);
+       $pid = filter_var($name, FILTER_SANITIZE_STRING);
        $name = $_POST['name'];
        $name = filter_var($name, FILTER_SANITIZE_STRING);
        $price = $_POST['price'];
