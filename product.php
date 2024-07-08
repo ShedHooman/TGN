@@ -21,7 +21,7 @@ if(isset($_POST['add_to_cart'])){
     }else{
  
        $pid = $_POST['pid'];
-       $pid = filter_var($name, FILTER_SANITIZE_STRING);
+       $pid = filter_var($pid, FILTER_SANITIZE_STRING);
        $name = $_POST['name'];
        $name = filter_var($name, FILTER_SANITIZE_STRING);
        $price = $_POST['price'];
@@ -170,53 +170,60 @@ if(isset($_POST['add_to_cart'])){
                 <h2 class="fw-bolder mb-4">Related products</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 
-                <?php
-                // 1. Produk Terlaris
-$stmt = $conn->prepare("SELECT * FROM products ORDER BY sold DESC LIMIT 4");
-$stmt->execute();
-$best_selling_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                <?php 
+                    // Read produucts
+                    // 1. Produk Terlaris
+                    $stmt = $conn->prepare("SELECT * FROM products ORDER BY sold DESC LIMIT 3");
+                    $stmt->execute();
+                    $best_selling_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// 2. Produk Terakhir Dilihat (Anda perlu menyimpan data ini di sesi atau database)
-$recently_viewed_products = isset($_SESSION['recently_viewed']) ? $_SESSION['recently_viewed'] : array();
+                    // 2. Produk Terakhir Dilihat (Anda perlu menyimpan data ini di sesi atau database)
+                    $recently_viewed_products = isset($_SESSION['recently_viewed']) ? $_SESSION['recently_viewed'] : array();
 
-// Batasi hanya 3 produk terakhir yang dilihat
-$recently_viewed_products = array_slice($recently_viewed_products, -4);
+                    // Batasi hanya 3 produk terakhir yang dilihat
+                    $recently_viewed_products = array_slice($recently_viewed_products, -3);
 
-// 3. Produk di Keranjang
-$stmt = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
-$stmt->execute([$user_id]);
-$cart_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    // 3. Produk di Keranjang
+                    $stmt = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
+                    $stmt->execute([$user_id]);
+                    $cart_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// 4. Rekomendasi Berdasarkan Preferensi Aroma (Anda perlu menyimpan preferensi di database)
-// Contoh sederhana: Ambil 3 produk random dengan aroma yang paling sering dibeli
-$stmt = $conn->prepare("SELECT p.* FROM products p
-                         INNER JOIN cart c ON p.name = c.name
-                         WHERE c.user_id = ?
-                         GROUP BY p.name
-                         ORDER BY COUNT(*) DESC 
-                         LIMIT 3");
-$stmt->execute([$user_id]);
-$recommended_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    // 4. Rekomendasi Berdasarkan Preferensi Aroma (Anda perlu menyimpan preferensi di database)
+                    // Contoh sederhana: Ambil 3 produk random dengan aroma yang paling sering dibeli
+                    $stmt = $conn->prepare("SELECT p.* FROM products p
+                                            INNER JOIN cart c ON p.name = c.name
+                                            WHERE c.user_id = ?
+                                            GROUP BY p.name
+                                            ORDER BY COUNT(*) DESC 
+                                            LIMIT 3");
+                    $stmt->execute([$user_id]);
+                    $recommended_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Gabungkan semua produk
-$all_products = array_merge(
-    $best_selling_products,
-    array_diff($recently_viewed_products, $best_selling_products), // Hilangkan duplikat
-    array_diff($cart_products, $best_selling_products, $recently_viewed_products), // Hilangkan duplikat
-    $recommended_products
-);
+                    // Gabungkan semua produk
+                    $all_products = array_merge(
+                        $best_selling_products,
+                        array_udiff($recently_viewed_products, $best_selling_products, function ($a, $b) {
+                            return $a['id'] <=> $b['id'];
+                        }), // Hilangkan duplikat
+                        array_udiff($cart_products, $best_selling_products, $recently_viewed_products, function ($a, $b) {
+                            return $a['id'] <=> $b['id'];
+                        }), // Hilangkan duplikat
+                        $recommended_products
+                    );
 
-// Jika kurang dari 3 produk, tambahkan produk random
-if (count($all_products) < 4) {
-    $stmt = $conn->prepare("SELECT * FROM products ORDER BY RAND() LIMIT ?");
-    $stmt->execute([4 - count($all_products)]);
-    $random_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $all_products = array_merge($all_products, $random_products);
-}
+                    $all_products = array_slice($all_products, 0, 3);
 
-// Tampilkan produk rekomendasi
-foreach ($all_products as $fetch_product) {
-                ?> 
+                    // Jika kurang dari 3 produk, tambahkan produk random
+                    if (count($all_products) < 3) {
+                        $stmt = $conn->prepare("SELECT * FROM products ORDER BY RAND() LIMIT ?");
+                        $stmt->execute([3 - count($all_products)]);
+                        $random_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        $all_products = array_merge($all_products, $random_products);
+                    }
+
+                    // Tampilkan produk rekomendasi
+                    foreach ($all_products as $fetch_product) {
+                ?>
 
                     <div class="col mb-5">
                         <div class="card h-100">
