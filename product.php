@@ -159,7 +159,7 @@ if ($total_reviews > 0) {
                             <span>Rp. <?= $fetch_product['price']; ?>,00</span>
                         </div>
                         <!-- Rating Bintang -->
-                        <a href="product-review.php?pid=<?= $fetch_product['id'];?>" class="no-style-link" title="Check Reviews">
+                        <a href="product-review.php?pid=<?= $fetch_product['id'];?>" class="no-style-link" title="Rating: <?= number_format($average_rating, 1); ?>/5.0">
                             <div class="d-flex justify-large text-warning mb-3">
                             <?php for ($i = 1; $i <= 5; $i++) : ?>
                                 <?php if ($i <= round($average_rating)) : ?>
