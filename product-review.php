@@ -30,11 +30,37 @@ if(isset($_POST['add_review'])) {
     $user_review = $_POST['user_review'];
     $user_review = filter_var($user_review, FILTER_SANITIZE_STRING);
     
-  // Example of inserting into a reviews table
   $insert_review = $conn->prepare("INSERT INTO reviews (user_id, pid, name, username, rating, review, date_added) VALUES (?, ?, ?, ?, ? , ?, NOW())");
   $insert_review->execute([$user_id, $pid, $name, $username, $rating, $user_review]);
-
   }
+}
+
+// Mengambil data product dengan id dari page sebelumnya
+$pid = $_GET['pid'];
+$select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?"); 
+$select_products->execute([$pid]);
+
+// mengambil data review 
+$reviews = $conn->prepare("SELECT rating, COUNT(*) as count FROM reviews WHERE pid = ? GROUP BY rating");
+$reviews->execute([$pid]);
+
+// Initialize review counts
+$review_counts = [1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0];
+$total_reviews = 0;
+
+while ($row = $reviews->fetch(PDO::FETCH_ASSOC)) {
+    $review_counts[$row['rating']] = $row['count'];
+    $total_reviews += $row['count'];
+}
+
+// counting  average rating
+$average_rating = 0;
+$total_rating = 0;
+foreach ($review_counts as $rating => $count) {
+    $total_rating += $rating * $count;
+}
+if ($total_reviews > 0) {
+    $average_rating = $total_rating / $total_reviews;
 }
 
 ?>
@@ -46,7 +72,7 @@ if(isset($_POST['add_review'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>[Template] Sample Inner Page</title>
+  <title>Reviews</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -127,10 +153,12 @@ if(isset($_POST['add_review'])) {
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Sample Inner Page</h2>
+          <h2>Product Reviews</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Sample Inner Page</li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="catalog.php">Catalogue</a></li>
+            <li><a href="product.php">Product Details</a></li>
+            <li>Product Reviews</li>
           </ol>
         </div>
 
@@ -142,12 +170,8 @@ if(isset($_POST['add_review'])) {
       
       <!-- ======= Product Rating Section ======= -->
       <?php
-        $pid = $_GET['pid'];
-        $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?"); 
-        $select_products->execute([$pid]);
         if($select_products->rowCount() > 0){
-          while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
-        
+          while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){ 
       ?>
           <div class="container">
             <div class="card">
@@ -158,65 +182,65 @@ if(isset($_POST['add_review'])) {
                         <img src="./assets/img/menu/<?= $fetch_product['image'];?>" alt="phone" width="230">
                         <button type="button" name="add_review" id="add_review" class="btn btn-primary form-control mt-3">Rate/Review This Product</button>
                     </div>
-                    
+                  <!-- Total Rating -->
                   <div class="col-sm-4 text-center">
                     <h1 class="text-warning mt-4 mb-4">
-                      <b><span id="average_rating">0.0</span> / 5</b>
+                      <b><span id="average_rating"><?= number_format($average_rating, 1); ?></span> / 5</b>
                     </h1>
                     <div class="mb-3 text-warning">
-                      <i class="bi-star-fill"></i>
-                      <i class="bi-star-fill"></i>
-                      <i class="bi-star-fill"></i>
-                      <i class="bi-star-half"></i>
-                      <i class="bi-star"></i>
-
+                      <?php for ($i = 1; $i <= 5; $i++) : ?>
+                        <?php if ($i <= round($average_rating)) : ?>
+                          <i class="bi-star-fill"></i>
+                        <?php elseif ($i - $average_rating < 1) : ?>
+                          <i class="bi-star-half"></i>
+                        <?php else : ?>
+                          <i class="bi-star"></i>
+                        <?php endif; ?>
+                      <?php endfor; ?>
                     </div>
-                    <h3><span id="total_review">0</span> Review</h3>
+
+                    <h3><span id="total_review"><?= $total_reviews; ?></span> Reviews</h3>
                   </div>
                   <div class="col-sm-4">
-                    <p>
+                  <p>
                         <div class="progress-label-left"><b>5</b> <i class="bi-star-fill text-warning"></i></div>
-
-                        <div class="progress-label-right">(<span id="total_five_star_review">0</span>)</div>
+                        <div class="progress-label-right">(<span id="total_five_star_review"><?= $review_counts[5]; ?></span>)</div>
                         <div class="progress">
-                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="five_star_progress"></div>
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;" id="five_star_progress"></div>
                         </div>
-                    </p>
-
-                    <p>
-                        <div class="progress-label-left"><b>4</b> <i class="bi-star-fill text-warning"></i></div>
-                                  
-                        <div class="progress-label-right">(<span id="total_four_star_review">0</span>)</div>
-                        <div class="progress">
-                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="four_star_progress"></div>
-                      </div>               
                       </p>
-                    <p>
+
+                      <p>
+                        <div class="progress-label-left"><b>4</b> <i class="bi-star-fill text-warning"></i></div>
+                        <div class="progress-label-right">(<span id="total_four_star_review"><?= $review_counts[4]; ?></span>)</div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;" id="four_star_progress"></div>
+                        </div>
+                      </p>
+
+                      <p>
                         <div class="progress-label-left"><b>3</b> <i class="bi-star-fill text-warning"></i></div>
-                                  
-                        <div class="progress-label-right">(<span id="total_three_star_review">0</span>)</div>
+                        <div class="progress-label-right">(<span id="total_three_star_review"><?= $review_counts[3]; ?></span>)</div>
                         <div class="progress">
-                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="three_star_progress"></div>
-                        </div>               
-                    </p>
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;" id="three_star_progress"></div>
+                        </div>
+                      </p>
 
-                    <p>
+                      <p>
                         <div class="progress-label-left"><b>2</b> <i class="bi-star-fill text-warning"></i></div>
-                          
-                        <div class="progress-label-right">(<span id="total_two_star_review">0</span>)</div>
+                        <div class="progress-label-right">(<span id="total_two_star_review"><?= $review_counts[2]; ?></span>)</div>
                         <div class="progress">
-                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="two_star_progress"></div>
-                        </div>               
-                    </p>
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;" id="two_star_progress"></div>
+                        </div>
+                      </p>
 
-                    <p>
+                      <p>
                         <div class="progress-label-left"><b>1</b> <i class="bi-star-fill text-warning"></i></div>
-                                  
-                        <div class="progress-label-right">(<span id="total_one_star_review">0</span>)</div>
+                        <div class="progress-label-right">(<span id="total_one_star_review"><?= $review_counts[1]; ?></span>)</div>
                         <div class="progress">
-                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="one_star_progress"></div>
-                        </div>               
-                    </p>
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 0%;" id="one_star_progress"></div>
+                        </div>
+                      </p>
 
                   </div>
                 </div>
@@ -256,19 +280,46 @@ if(isset($_POST['add_review'])) {
                 </div>
             </div>
 
+            <!-- review comment-->
+            <h3 class="mt-3 ml-4">Product Reviews:</h3>
+            
+            <?php 
+            $select_query = "SELECT * FROM `reviews` WHERE `name` IN ('" . $fetch_product['name'] . "') ";
+            $result = $conn->query($select_query);
+              if ($result->rowCount() > 0) {
+                while ($fetch_review= $result->fetch(PDO::FETCH_ASSOC)) {
+                  $review_username = $fetch_review['username'];
+                  $first_letter = substr($review_username, 0, 1);
+            ?>
+            <div class="row mb-3">
+                <div class="col-sm-11">
+                    <div class="card">
+                        <div class="card-header">
+                            <b><?= $fetch_review["username"]; ?></b>
+                        </div>
+                        <div class="card-body">
+                        <?= $fetch_review["review"]; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php
-              }
-              }else{
-                  echo '<p class=>belum ada produk yang ditambahkan!</p>';
+                }
               }
             ?>
-
-              <h3 class="mt-3 ml-4">Product Reviews:</h3>
-            </div>
 
           </div>
       </div>
     </section>
+
+    <?php
+            }
+            } else { 
+            ?>
+            <tr><td colspan='12'>No review added</td></tr>;
+            <?php
+            }
+            ?>
 
   </main><!-- End #main -->
 
@@ -327,11 +378,29 @@ if(isset($_POST['add_review'])) {
         }
       });
 
-      //Menyalakan bintang saat mouse ditekan
+      //Mengubah value bintang saat mouse ditekan
       $(document).on('click', '.submit_star', function(){
           rating_data = $(this).data('rating');
           $('#rating').val(rating_data);
       });
+
+      //Mengubah warna bar bintang
+      var totalReviews = <?= $total_reviews; ?>;
+      var reviewCounts = <?= json_encode($review_counts); ?>;
+      
+      //Mengubah value menjadi 0 bila tidak ada review sama sekali
+      var fiveStarWidth = totalReviews > 0 ? (reviewCounts[5] / totalReviews) * 100 : 0;
+      var fourStarWidth = totalReviews > 0 ? (reviewCounts[4] / totalReviews) * 100 : 0;
+      var threeStarWidth = totalReviews > 0 ? (reviewCounts[3] / totalReviews) * 100 : 0;
+      var twoStarWidth = totalReviews > 0 ? (reviewCounts[2] / totalReviews) * 100 : 0;
+      var oneStarWidth = totalReviews > 0 ? (reviewCounts[1] / totalReviews) * 100 : 0;
+
+      $('#five_star_progress').css('width', fiveStarWidth + '%').addClass('bg-warning');
+      $('#four_star_progress').css('width', fourStarWidth + '%').addClass('bg-warning');
+      $('#three_star_progress').css('width', threeStarWidth + '%').addClass('bg-warning');
+      $('#two_star_progress').css('width', twoStarWidth + '%').addClass('bg-warning');
+      $('#one_star_progress').css('width', oneStarWidth + '%').addClass('bg-warning');
+
     });
   </script>
 
