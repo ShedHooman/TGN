@@ -45,6 +45,33 @@ if(isset($_POST['add_to_cart'])){
     }
 }
 
+// Mengambil data product dengan id dari page sebelumnya
+$pid = $_GET['pid'];
+$select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?"); 
+$select_products->execute([$pid]);
+
+// mengambil data review 
+$reviews = $conn->prepare("SELECT rating, COUNT(*) as count FROM reviews WHERE pid = ? GROUP BY rating");
+$reviews->execute([$pid]);
+
+// Initialize review counts
+$review_counts = [1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0];
+$total_reviews = 0;
+
+while ($row = $reviews->fetch(PDO::FETCH_ASSOC)) {
+    $review_counts[$row['rating']] = $row['count'];
+    $total_reviews += $row['count'];
+}
+
+// counting  average rating
+$average_rating = 0;
+$total_rating = 0;
+foreach ($review_counts as $rating => $count) {
+    $total_rating += $rating * $count;
+}
+if ($total_reviews > 0) {
+    $average_rating = $total_rating / $total_reviews;
+}
  
 ?>
 
@@ -112,12 +139,8 @@ if(isset($_POST['add_to_cart'])){
     <!-- ======= Product Section ======= -->
 
       <?php
-        $pid = $_GET['pid'];
-        $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?"); 
-        $select_products->execute([$pid]);
         if($select_products->rowCount() > 0){
-          while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
-        
+          while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){ 
       ?>
     <section class="py-5">
         <form action="" method="post">  
@@ -135,14 +158,18 @@ if(isset($_POST['add_to_cart'])){
                         <div class="fs-5 mb-2">
                             <span>Rp. <?= $fetch_product['price']; ?>,00</span>
                         </div>
-
+                        <!-- Rating Bintang -->
                         <a href="product-review.php?pid=<?= $fetch_product['id'];?>" class="no-style-link" title="Check Reviews">
                             <div class="d-flex justify-large text-warning mb-3">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-half"></div>
-                                <div class="bi-star"></div>
+                            <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <?php if ($i <= round($average_rating)) : ?>
+                                    <div class="bi-star-fill"></div>
+                                <?php elseif ($i - $average_rating < 1) : ?>
+                                    <div class="bi-star-half"></div>
+                                <?php else : ?>
+                                    <div class="bi-star"></div>
+                                <?php endif; ?>
+                            <?php endfor; ?>
                             </div>
                         </a>
                         <div class="mb-4">
@@ -173,50 +200,82 @@ if(isset($_POST['add_to_cart'])){
                 <?php 
                     // Read produucts
                     // 1. Produk Terlaris
-                    $stmt = $conn->prepare("SELECT * FROM products ORDER BY sold DESC LIMIT 3");
+                    $stmt = $conn->prepare("SELECT * FROM products ORDER BY sold DESC LIMIT 4");
                     $stmt->execute();
                     $best_selling_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    // 2. Produk Terakhir Dilihat (Anda perlu menyimpan data ini di sesi atau database)
-                    $recently_viewed_products = isset($_SESSION['recently_viewed']) ? $_SESSION['recently_viewed'] : array();
-
-                    // Batasi hanya 3 produk terakhir yang dilihat
-                    $recently_viewed_products = array_slice($recently_viewed_products, -3);
-
-                    // 3. Produk di Keranjang
+                    // 2. Produk di Keranjang
                     $stmt = $conn->prepare("SELECT * FROM cart WHERE user_id = ?");
                     $stmt->execute([$user_id]);
                     $cart_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    // 4. Rekomendasi Berdasarkan Preferensi Aroma (Anda perlu menyimpan preferensi di database)
-                    // Contoh sederhana: Ambil 3 produk random dengan aroma yang paling sering dibeli
+                    // 3. Rekomendasi Berdasarkan Preferensi Aroma (Contoh sederhana)
                     $stmt = $conn->prepare("SELECT p.* FROM products p
                                             INNER JOIN cart c ON p.name = c.name
                                             WHERE c.user_id = ?
-                                            GROUP BY p.name
+                                            GROUP BY p.id
                                             ORDER BY COUNT(*) DESC 
-                                            LIMIT 3");
+                                            LIMIT 4");
                     $stmt->execute([$user_id]);
                     $recommended_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    // Gabungkan semua produk
-                    $all_products = array_merge(
-                        $best_selling_products,
-                        array_udiff($recently_viewed_products, $best_selling_products, function ($a, $b) {
-                            return $a['id'] <=> $b['id'];
-                        }), // Hilangkan duplikat
-                        array_udiff($cart_products, $best_selling_products, $recently_viewed_products, function ($a, $b) {
-                            return $a['id'] <=> $b['id'];
-                        }), // Hilangkan duplikat
-                        $recommended_products
-                    );
+                    // 4. Produk dengan Rating Tertinggi
+                    $stmt = $conn->prepare("SELECT p.*, AVG(r.rating) as avg_rating FROM products p
+                                            INNER JOIN reviews r ON p.id = r.pid
+                                            GROUP BY p.id
+                                            ORDER BY avg_rating DESC 
+                                            LIMIT 4");
+                    $stmt->execute();
+                    $top_rated_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    $all_products = array_slice($all_products, 0, 3);
+                    // Gabungkan semua produk tanpa duplikat
+                    $all_products = [];
+
+                    // Fungsi untuk memeriksa duplikat
+                    function isDuplicateProduct($product, $products) {
+                        foreach ($products as $existing_product) {
+                            if ($product['id'] == $existing_product['id']) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+
+                    // Tambahkan produk terlaris
+                    foreach ($best_selling_products as $product) {
+                        if (!isDuplicateProduct($product, $all_products)) {
+                            $all_products[] = $product;
+                        }
+                    }
+
+                    // Tambahkan produk di keranjang
+                    foreach ($cart_products as $product) {
+                        if (!isDuplicateProduct($product, $all_products)) {
+                            $all_products[] = $product;
+                        }
+                    }
+
+                    // Tambahkan rekomendasi berdasarkan preferensi aroma
+                    foreach ($recommended_products as $product) {
+                        if (!isDuplicateProduct($product, $all_products)) {
+                            $all_products[] = $product;
+                        }
+                    }
+
+                    // Tambahkan produk dengan rating tertinggi
+                    foreach ($top_rated_products as $product) {
+                        if (!isDuplicateProduct($product, $all_products)) {
+                            $all_products[] = $product;
+                        }
+                    }
+
+                    // Hanya ambil 4 produk pertama
+                    $all_products = array_slice($all_products, 0, 4);
 
                     // Jika kurang dari 3 produk, tambahkan produk random
-                    if (count($all_products) < 3) {
+                    if (count($all_products) < 4) {
                         $stmt = $conn->prepare("SELECT * FROM products ORDER BY RAND() LIMIT ?");
-                        $stmt->execute([3 - count($all_products)]);
+                        $stmt->execute([4 - count($all_products)]);
                         $random_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         $all_products = array_merge($all_products, $random_products);
                     }
@@ -227,8 +286,6 @@ if(isset($_POST['add_to_cart'])){
 
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
                             <img class="card-img-top" src="assets/img/menu/<?= $fetch_product['image'];?>" alt="..." />
                             <!-- Product details-->
@@ -236,14 +293,6 @@ if(isset($_POST['add_to_cart'])){
                                 <div class="text-center">
                                     <!-- Product name-->
                                     <h5 class="fw-bolder"><?= $fetch_product['name']; ?></h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
                                     <!-- Product price-->
                                     Rp <?= $fetch_product['price']; ?>,00
                                 </div>
